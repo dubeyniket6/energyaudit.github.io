@@ -1,0 +1,83 @@
+>
+<head>
+<script>
+function adds()
+{
+
+
+var cat1=parseInt(document.frm.cat1.value);
+var cat2=parseInt(document.frm.cat2.value);
+var cat3=parseInt(document.frm.cat3.value);
+var cat4=parseInt(document.frm.cat4.value);
+var cat5=parseInt(document.frm.cat5.value);
+var cat6=parseInt(document.frm.cat6.value);
+var cat7=parseInt(document.frm.cat7.value);
+var htunits=parseInt(document.frm.htunits.value);
+document.frm.billedunits.value=cat1+cat2+cat3+cat4+cat5+cat6+cat7+htunits;
+}
+function fclear()
+{
+document.frm.dtrs.value="";
+document.frm.cat1.value="";
+document.frm.cat2.value="";
+document.frm.cat3.value="";
+document.frm.cat4.value="";
+document.frm.cat5.value="";
+document.frm.cat6.value="";
+document.frm.cat7.value="";
+document.frm.services.value="";
+document.ht.htunits.value="";
+document.frm.tservice.value="";
+document.frm.billedunits.value="";
+}
+</script>
+</head>
+<body background="watbkgnd.gif">
+<form  name=frm method=post action=operac.jsp>
+<h3 align=center><font color=purple><u>Operation Circle::kadapa</u></font></h3>
+<table bordercolor=#2a52be border=3 align=center>
+<tr><td>Fcode<td><select name="fid">
+<% while(rs.next()){%>
+<option>
+<%=rs.getInt(1)%>
+</option>
+<%}%>
+</select>
+</tr>
+
+<tr><td>No.Of.Dtrs<td><select name="dtrs" onfocus="fclear()">
+<% while(rs1.next()){%>
+<option>
+<%=rs1.getInt(2)%>
+</option>
+<%}%>
+</select>
+</tr>
+<tr><td>month<td><select name="monthp">
+<% while(rs2.next()){%>
+<option>
+<%=rs2.getString(1)%>
+</option>
+<%}%>
+</select>
+</tr>
+
+<tr><td>Cat-1<td><input type=text name="cat1"></tr>
+<tr><td>Cat-2<td><input type=text name="cat2"></tr>
+<tr><td>Cat-3<td><input type=text name="cat3"></tr>
+<tr><td>Cat-4<td><input type=text name="cat4"></tr>
+<tr><td>Cat-5<td><input type=text name="cat5"></tr>
+<tr><td>Cat-6<td><input type=text name="cat6"></tr>
+<tr><td>Cat-7<td><input type=text name="cat7"></tr>
+<tr><td>Ht services<td><input type=text name="services" ></tr>
+<tr><td>HT units<td><input type=text name="htunits" ></tr>
+<tr><td>Total Service<td><input type=text name="tservice" onblur="adds()"></tr>
+<tr><td>Total Billed units<td><input type=text name="billedunits"></tr>
+
+<tr><td align=center><input type=submit value=submit>
+<td align=center><input type=reset value=cancel>
+</tr></table><br>
+<a href=hyperc.html><img src=Back_3.gif width=40 height=30></a>
+</form>
+</body>
+</html>

@@ -1,0 +1,100 @@
+*{	
+		margin:0;
+		padding: 0;
+		font-family:Century Gothic;
+    }
+
+    header{
+
+    	  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(5.jpg);
+    	  height: 100vh;
+    	  background-size: cover;
+    	  background-position: center;
+
+
+    }
+
+    .helpline{
+    	color: white;
+    	text: bold;
+    }
+    ul{
+         list-style-type: none;
+    	margin: 25px;
+      	float:right;
+
+    }
+
+    ul li{
+    	    display: inline-block
+    	    float: center;  
+    	    padding: 7px 5px;  }
+
+    ul li a{
+    	text-decoration: none;
+    	color: white ;
+    	padding: 3px 20px;
+    	border: 1px solid transparent;  
+    	  }
+
+    ul li a:hover{
+    	           background-color: #fff;
+    	           color:#000;
+    }
+
+    .logo img{
+    	float: left;
+    	width: 150px;
+    	height:auto;
+    	border-radius: 20%;
+    	padding:20px;
+    }
+    .logo1 {
+    	position: absolute;
+        top: 55px;
+        right: 700px;
+        width: 100px;
+        height: 100px;
+
+    
+    }
+    .main{
+    	   max-width: 1200px;
+    	   margin-top: auto;
+    }
+
+    .title{
+    	    position: absolute;
+    	    top: 50%;
+    	    left: 50%;
+    	    transform: translate(-50% ,-50%);
+    }
+
+    .title h1{
+    	color: white;
+    	font-size: 70px;
+    }
+
+    .latest {
+    	color: white;
+    	font-size: 10px;
+    	text-align: center;
+
+    }  
+       
+}
+ 
+ .shw-btn{
+ 	    background: #fff;
+ 	    padding: 10px 20px;
+ 	    font-size: 20px;
+ 	    font-weight: 500;
+ 	    cursor: pointer;
+ 	    border-radius: 10%;
+ 	    color: #3498db;
+ 	    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+ 	    padding:20px;
+ 	    position: absolute;
+ 	    left: 50%;
+ 	    top: 85%;
+ }

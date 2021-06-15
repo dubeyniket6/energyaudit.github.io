@@ -1,0 +1,117 @@
+<html>
+   <head>
+      <title>Energy Audit System </title>
+
+
+
+<script type = "text/javascript">
+         <!--
+
+
+
+var col = ["orange","peru","whitesmoke","yellowgreen","seagreen","goldenrod","dimgray","cyan","brown","blueviolet","blanchedalmond","bisque","beige","azure","aquamarine","antiquewhite","aliceblue","yellow","teal","silver", "purple","olive","navy","maroon","lime","fuchsia","red", "green", "blue" ];
+var i=0;
+var j=28;
+
+function run()
+{
+
+window.setInterval( "foa()", 1000 );
+}
+
+function foa()
+{
+i++;
+colordis.innerText=col[i];
+bd.style.backgroundColor = col[ i ]
+
+if(i==j)
+i=0;
+
+}
+
+
+// -->
+   </script>
+   </head>
+
+<body  onload = "run()" id="bd">
+<h3><b><u><CENTER><font color=black>Energy Audit system</font></CENTER></U></B></H3>
+<h4><b><I><CENTER><font color=black>Select Your Fields</font></CENTER></I></B></H4>
+
+<center>
+
+
+      
+         
+   <form action = "demosubstation.php"  target=home method = "get">
+
+     <input type = "submit" value = "Station  Form   " />
+
+   </form>
+<br/>
+<br/>
+<br/>
+<form action = "feeder.php" target=home  method = "get">
+
+     <input type = "submit" value = " Feeder  Form " />
+
+   </form>
+<br/>
+<br/>
+<br/>
+<form action = "transformer.php"  target=home method = "get">
+
+     <input type = "submit" value = " DTR   Form  " />
+
+   </form>
+<br/>
+<br/>
+<br/>
+
+<form action = "area.php" target=home method = "get">
+
+     <input type = "submit" value = "Area   Form  " />
+
+   </form>
+<br/>
+<br/>
+<br/>
+
+
+
+<form action = "energydivision.php" target=home  method = "get">
+
+     <input type = "submit" value = "Energy Division " />
+
+   </form>
+<br/>
+<br/>
+<br/>
+
+<form action = "hyperc.html" target=home  method = "get">
+
+     <input type = "submit" value = " Energy Circle   " />
+
+   </form>
+<br/>
+<br/>
+<br/>
+<form action = "hyperop.html" target=home  method = "get">
+
+     <input type = "submit" value = " Energy Output   " />
+
+   </form>
+<br/>
+<br/>
+<br/>
+
+<h6><i><b>
+<p id="colordis"> </p>
+
+</b></i></h6>
+</center>
+   
+</body>
+</html>
+

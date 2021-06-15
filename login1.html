@@ -1,0 +1,53 @@
+<?php
+$connect=mysqli_connect("localhost","root"," ", "energyaudit") or die("Connection Failed");
+
+if(!empty($_POST['save']))
+{
+$username=$_POST['un'];
+$password=$_POST['pw'];
+
+$query="select * from login where username='$username' and password='$password'";
+$result=mysqli_query($connect, $query); 
+$count=mysqli_num_rows($result);
+
+if($count>0)
+{
+	header("Location : links1.html");
+	
+}
+
+else
+
+{
+	echo "Login Not Successful";
+}
+}
+
+?>
+<form method="post">
+  <link rel="stylesheet" type="text/css" href="style1.css">
+  <header><div class="header"></div>
+   <div class="container">
+   Enter UserName <input type="text" name="un"/>
+<br/> 
+
+Enter Password <input type="text" name="pw"/>
+
+<br/> 
+<input type="submit" name="save" value="Login"/>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+   <a href="file:///C:/xampp/htdocs/index.html"><button type="button" class="cancelbtn">Cancel</button></a>
+    <span class="psw"><a href="#">Forgot password?</a></span>
+  </div>
+</form>
+
+
+
+
+
+
